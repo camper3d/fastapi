@@ -1,7 +1,7 @@
 from app1.database import Base
 from sqlalchemy import Column, Integer, String
 
-
+# Создание таблицы пользователей
 class Users(Base):
     __tablename__ = 'users'
 

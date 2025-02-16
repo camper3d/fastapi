@@ -1,7 +1,7 @@
 from app1.database import Base
 from sqlalchemy import Column, Integer, ForeignKey, Date, Computed
 
-
+# Создание таблицы бронирования
 class Bookings(Base):
     __tablename__ = 'bookings'
 

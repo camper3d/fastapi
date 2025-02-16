@@ -1,7 +1,7 @@
 from app1.database import Base
 from sqlalchemy import JSON, Column, Integer, String, ForeignKey
 
-
+# Создание таблицы отелей
 class Hotels(Base):
     __tablename__ = 'hotels'
 
@@ -12,7 +12,7 @@ class Hotels(Base):
     rooms_quantity = Column(Integer, nullable= False)
     image_id = Column(Integer)
 
-
+# Создание таблицы комнат
 class Rooms(Base):
     __tablename__ = 'rooms'
 
