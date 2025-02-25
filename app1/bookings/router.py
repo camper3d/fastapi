@@ -13,7 +13,6 @@ router = APIRouter(
 
 @router.get("")
 async def get_bookings() -> list[SchemaBooking]:
-    bookings = await BookingDAO.find_all()
-    return [SchemaBooking.model_validate(booking) for booking in bookings]
+     return await BookingDAO.find_all()
 
 

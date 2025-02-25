@@ -1,7 +1,7 @@
 from app1.database import async_session_maker
 from sqlalchemy import select, insert
 
-
+# Базовый класс
 class BaseDAO:
     model = None
 
