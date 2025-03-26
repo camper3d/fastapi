@@ -24,6 +24,6 @@ async def login_user(response: Response, user_data: SchemaUserAuth):
     user = await authenticate_user(user_data.email, user_data.password) # Проверка маила, юзера, пароля
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED) # Ошибка авторизации
-    access_token = create_access_token({'sub': user.id}) # Создание токен доступа
+    access_token = create_access_token({'sub': str(user.id)}) # Создание токен доступа(обязательно строчный тип)
     response.set_cookie('booking_access_token', access_token, httponly=True) # Сэтим куку, httponly=True, чтобы нельзя было достать куку через js
     return {'access_token': access_token}
